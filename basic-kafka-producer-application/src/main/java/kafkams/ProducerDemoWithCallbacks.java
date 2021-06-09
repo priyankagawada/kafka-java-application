@@ -12,7 +12,7 @@ import org.slf4j.LoggerFactory;
 
 public class ProducerDemoWithCallbacks {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, ExecutionException{
 
 		Logger logger = LoggerFactory.getLogger(ProducerDemoWithCallbacks.class);
 		System.out.println("Producer Application");
@@ -57,7 +57,7 @@ public class ProducerDemoWithCallbacks {
 				}
 			}
 
-		});
+		}).get();
 
 		}
 		
